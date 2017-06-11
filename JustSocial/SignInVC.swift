@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SignInVC.swift
 //  JustSocial
 //
 //  Created by Madhusudhan B.R on 6/10/17.
@@ -21,7 +21,15 @@ class SignInVC: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        if let uid = KeychainWrapper.standard.string(forKey: "uid"){
+            performSegue(withIdentifier: "FeedVC", sender: nil)
+        }
+    }
+    
     @IBAction func facebookBtnTapped(_ sender: AnyObject) {
         
         let facebookLogin = FBSDKLoginManager()
@@ -47,6 +55,10 @@ class SignInVC: UIViewController {
             } else {
                 print("MADHU: Successfully authenticated with Firebase")
                 
+                if let user = user {
+                    KeychainWrapper.standard.set(user.uid, forKey: "uid")
+                }
+                
             }
         })
     }
@@ -55,7 +67,9 @@ class SignInVC: UIViewController {
             Auth.auth().signIn(withEmail: email, password: pwd, completion: { (user, error) in
                 if error == nil {
                     print("MADHU: Email user authenticated with Firebase")
-                    
+                    if let user = user {
+                        KeychainWrapper.standard.set(user.uid, forKey: "uid")
+                    }
                     
                 } else {
                     Auth.auth().createUser(withEmail: email, password: pwd, completion: { (user, error) in
@@ -63,6 +77,9 @@ class SignInVC: UIViewController {
                             print("MADHU: Unable to authenticate with Firebase using email")
                         } else {
                             print("MADHU: Successfully authenticated with Firebase")
+                            if let user = user {
+                                KeychainWrapper.standard.set(user.uid, forKey: "uid")
+                            }
                 
                         }
                     })
