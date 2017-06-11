@@ -59,6 +59,7 @@ class SignInVC: UIViewController {
                     KeychainWrapper.standard.set(user.uid, forKey: "uid")
                 }
                 
+                self.performSegue(withIdentifier: "FeedVC", sender: nil)
             }
         })
     }
@@ -70,6 +71,8 @@ class SignInVC: UIViewController {
                     if let user = user {
                         KeychainWrapper.standard.set(user.uid, forKey: "uid")
                     }
+                    self.performSegue(withIdentifier: "FeedVC", sender: nil)
+
                     
                 } else {
                     Auth.auth().createUser(withEmail: email, password: pwd, completion: { (user, error) in
@@ -80,7 +83,7 @@ class SignInVC: UIViewController {
                             if let user = user {
                                 KeychainWrapper.standard.set(user.uid, forKey: "uid")
                             }
-                
+                self.performSegue(withIdentifier: "FeedVC", sender: nil)
                         }
                     })
                 }
