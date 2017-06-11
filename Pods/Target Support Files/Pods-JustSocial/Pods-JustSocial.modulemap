@@ -1,0 +1,6 @@
+framework module Pods_JustSocial {
+  umbrella header "Pods-JustSocial-umbrella.h"
+
+  export *
+  module * { export * }
+}
