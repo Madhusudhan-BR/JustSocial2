@@ -10,7 +10,8 @@ target 'JustSocial' do
 	pod ‘Firebase/Auth’
 	pod ‘Firebase/Storage’
 	pod ‘Firebase/Database’
-    
+    pod 'FacebookLogin'
+    pod 'SwiftKeychainWrapper'
   target 'JustSocialTests' do
     inherit! :search_paths
     # Pods for testing
