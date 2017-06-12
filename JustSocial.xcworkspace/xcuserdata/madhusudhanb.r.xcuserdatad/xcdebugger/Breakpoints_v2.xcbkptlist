@@ -10,13 +10,61 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JustSocial/FeedVC.swift"
-            timestampString = "518891926.067898"
+            timestampString = "518925293.969201"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "11"
-            endingLineNumber = "11"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
             landmarkName = "FeedVC"
             landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JustSocial/SignInVC.swift"
+            timestampString = "518924574.899577"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "firebaseAuth(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "JustSocial.SignInVC.(firebaseAuth (__ObjC.AuthCredential) -&gt; ()).(closure #1)"
+                  moduleName = "JustSocial"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/madhusudhanb.r/Desktop/JustSocialNew/JustSocial/SignInVC.swift"
+                  timestampString = "518924576.549571"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "727">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "JustSocial.SignInVC.(firebaseAuth (__ObjC.AuthCredential) -&gt; ()).(closure #1)"
+                  moduleName = "JustSocial"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/madhusudhanb.r/Desktop/JustSocialNew/JustSocial/SignInVC.swift"
+                  timestampString = "518924576.55178"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "766">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

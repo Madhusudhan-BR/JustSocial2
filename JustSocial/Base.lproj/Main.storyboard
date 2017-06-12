@@ -185,7 +185,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nCe-xl-bkd" customClass="CustomView" customModule="JustSocial" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_power_settings_new_48pt" translatesAutoresizingMaskIntoConstraints="NO" id="t4a-ve-WZY">
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_power_settings_new_48pt" translatesAutoresizingMaskIntoConstraints="NO" id="t4a-ve-WZY">
                                         <rect key="frame" x="8" y="24" width="33" height="33"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="33" id="GWR-hW-KCc"/>
@@ -194,8 +194,9 @@
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vaF-pY-Wfb">
                                         <rect key="frame" x="9.5" y="25.5" width="30" height="30"/>
+                                        <gestureRecognizers/>
                                         <connections>
-                                            <action selector="logoutButtonTapped:" destination="LY3-lE-518" eventType="touchUpInside" id="lPB-fU-d0v"/>
+                                            <action selector="logoutButtonTapped:" destination="LY3-lE-518" eventType="touchUpInside" id="FgB-Nu-JKw"/>
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="JustSocial" translatesAutoresizingMaskIntoConstraints="NO" id="YpB-EW-7DZ">

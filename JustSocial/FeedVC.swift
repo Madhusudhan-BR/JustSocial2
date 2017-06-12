@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SwiftKeychainWrapper
+import Firebase
 
 class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -37,6 +39,10 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
 
     @IBAction func logoutButtonTapped(_ sender: Any) {
+        let keyChain = KeychainWrapper.standard.removeObject(forKey: "uid")
+        try! Auth.auth().signOut()
+        print("MADHU: sign out tapped")
+        dismiss(animated: true, completion: nil)
     }
    
 }

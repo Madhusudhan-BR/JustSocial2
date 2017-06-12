@@ -54,7 +54,8 @@ class SignInVC: UIViewController {
                 print("MADHU: Unable to authenticate with Firebase - \(error)")
             } else {
                 print("MADHU: Successfully authenticated with Firebase")
-                
+                let userData = ["Provider" : credential.provider]
+                DataService.Ds.createDBUser(userID: (user?.uid)!, userData: userData as! Dictionary<String, String>)
                 if let user = user {
                     KeychainWrapper.standard.set(user.uid, forKey: "uid")
                 }
@@ -63,6 +64,7 @@ class SignInVC: UIViewController {
             }
         })
     }
+    
     @IBAction func signInTapped(_ sender: AnyObject) {
         if let email = emailTextField.text, let pwd = pwdTextField.text {
             Auth.auth().signIn(withEmail: email, password: pwd, completion: { (user, error) in
@@ -71,6 +73,8 @@ class SignInVC: UIViewController {
                     if let user = user {
                         KeychainWrapper.standard.set(user.uid, forKey: "uid")
                     }
+                    let userData = ["Provider" : user?.providerID]
+                    DataService.Ds.createDBUser(userID: (user?.uid)!, userData: userData as! Dictionary<String, String>)
                     self.performSegue(withIdentifier: "FeedVC", sender: nil)
 
                     
@@ -80,6 +84,8 @@ class SignInVC: UIViewController {
                             print("MADHU: Unable to authenticate with Firebase using email")
                         } else {
                             print("MADHU: Successfully authenticated with Firebase")
+                            let userData = ["Provider" : user?.providerID]
+                            DataService.Ds.createDBUser(userID: (user?.uid)!, userData: userData as! Dictionary<String, String>)
                             if let user = user {
                                 KeychainWrapper.standard.set(user.uid, forKey: "uid")
                             }
