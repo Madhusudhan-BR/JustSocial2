@@ -21,6 +21,9 @@
 		9BDD158C1EECCE7300B87127 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDD158B1EECCE7300B87127 /* CustomLabel.swift */; };
 		9BDD158E1EECCFD400B87127 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDD158D1EECCFD400B87127 /* CustomTextField.swift */; };
 		9BDD15901EEDA7C700B87127 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDD158F1EEDA7C700B87127 /* FeedVC.swift */; };
+		9BDD15921EEE0D9400B87127 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDD15911EEE0D9400B87127 /* FeedCell.swift */; };
+		9BDD15941EEE108B00B87127 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDD15931EEE108B00B87127 /* CustomImageView.swift */; };
+		9BDD15961EEE118100B87127 /* NewCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDD15951EEE118100B87127 /* NewCustomButton.swift */; };
 		BF4FDF31FD77BBF392F89737 /* Pods_JustSocialTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAD8369AE687841BB9A82E31 /* Pods_JustSocialTests.framework */; };
 		D37D3C89C20D012019A1BF94 /* Pods_JustSocial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9759F0DBBC4142825258B86B /* Pods_JustSocial.framework */; };
 /* End PBXBuildFile section */
@@ -56,6 +59,9 @@
 		9BDD158B1EECCE7300B87127 /* CustomLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		9BDD158D1EECCFD400B87127 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		9BDD158F1EEDA7C700B87127 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		9BDD15911EEE0D9400B87127 /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		9BDD15931EEE108B00B87127 /* CustomImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
+		9BDD15951EEE118100B87127 /* NewCustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCustomButton.swift; sourceTree = "<group>"; };
 		BAD8369AE687841BB9A82E31 /* Pods_JustSocialTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JustSocialTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6F48EED002B3CE89A9EBC17 /* Pods-JustSocial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JustSocial.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JustSocial/Pods-JustSocial.debug.xcconfig"; sourceTree = "<group>"; };
 		E0B23350603D9DB0FA296A93 /* Pods-JustSocialTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JustSocialTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JustSocialTests/Pods-JustSocialTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -153,6 +159,9 @@
 				9BDD158B1EECCE7300B87127 /* CustomLabel.swift */,
 				9BDD158D1EECCFD400B87127 /* CustomTextField.swift */,
 				9BDD15891EECCCB800B87127 /* RoundedView.swift */,
+				9BDD15951EEE118100B87127 /* NewCustomButton.swift */,
+				9BDD15931EEE108B00B87127 /* CustomImageView.swift */,
+				9BDD15911EEE0D9400B87127 /* FeedCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -398,11 +407,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BDD15901EEDA7C700B87127 /* FeedVC.swift in Sources */,
+				9BDD15961EEE118100B87127 /* NewCustomButton.swift in Sources */,
+				9BDD15921EEE0D9400B87127 /* FeedCell.swift in Sources */,
 				9BDD15881EECC9FF00B87127 /* Constants.swift in Sources */,
 				9BDD155D1EEBD87900B87127 /* SignInVC.swift in Sources */,
 				9BDD158A1EECCCB800B87127 /* RoundedView.swift in Sources */,
 				9BDD158C1EECCE7300B87127 /* CustomLabel.swift in Sources */,
 				9BDD158E1EECCFD400B87127 /* CustomTextField.swift in Sources */,
+				9BDD15941EEE108B00B87127 /* CustomImageView.swift in Sources */,
 				9BDD15861EECC83A00B87127 /* CustomView.swift in Sources */,
 				9BDD155B1EEBD87900B87127 /* AppDelegate.swift in Sources */,
 				9BDD15631EEBD87900B87127 /* JustSocial.xcdatamodeld in Sources */,
