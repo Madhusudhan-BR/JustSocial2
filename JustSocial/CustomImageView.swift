@@ -17,6 +17,7 @@ class CustomImageView: UIImageView {
     override func layoutSubviews() {
         super.layoutSubviews()
         layer.cornerRadius = 35
+        clipsToBounds = true
     }
     
 }
