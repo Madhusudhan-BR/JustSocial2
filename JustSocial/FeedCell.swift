@@ -18,9 +18,10 @@ class FeedCell: UITableViewCell {
     
     @IBOutlet weak var postedDescription: UITextView!
     @IBOutlet weak var postedPicture: UIImageView!
-    override func awakeFromNib() {
-        super.awakeFromNib()
-      
+    
+    func configureCell(post : Post){
+        self.likesLabel.text = "\(post.likes)"
+        self.postedDescription.text = post.caption
     }
 
 
