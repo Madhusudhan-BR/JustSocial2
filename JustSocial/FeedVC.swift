@@ -18,6 +18,11 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         tableView.dataSource = self
         tableView.delegate = self
+        
+        DataService.Ds.BASE_POSTS.observe(.value, with: { (snapshot) in
+            print("MADHU : Snapshot received from firebase ")
+            print(snapshot)
+        })
 
         // Do any additional setup after loading the view.
     }
