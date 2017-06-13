@@ -32,7 +32,10 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         imagePicker.delegate = self
         imagePicker.allowsEditing = true
         
+        
+        
         DataService.Ds.BASE_POSTS.observe(.value, with: { (snapshot) in
+            self.posts.removeAll()
             print("MADHU : Snapshot received from firebase ")
             if let snapshots = snapshot.children.allObjects as? [DataSnapshot] {
                 for snap in snapshots {
@@ -44,6 +47,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
                     }
                 }
             }
+            
             self.tableView.reloadData()
         })
 
@@ -106,8 +110,40 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     
     @IBAction func shareButtonTapped(_ sender: Any) {
         
+        guard let image = imageView.image else {
+            print("MADHU: image not selecteed")
+            return
+        }
+        
+        if let imageData = UIImageJPEGRepresentation(image, 0.2) {
+            let imageUID = NSUUID().uuidString
+            let metadata = StorageMetadata()
+            metadata.contentType = "image/jpg"
+            
+            DataService.Ds.BASE_POSTED_IMAGES.child(imageUID).putData(imageData, metadata: metadata) { (metadata,error) in
+                
+                if error != nil {
+                    print("MADHU: upload error")
+                }
+                else {
+                    print("MADHU: Upload SUCCESS")
+                    let downloadUrl = metadata?.downloadURL()?.absoluteString
+                    self.postToFirebase(downloadURL: downloadUrl!)
+                    
+                }
+            }
+        }
         
         
+    }
+    
+    func postToFirebase(downloadURL: String) {
+        let post : Dictionary<String, Any> = ["Caption" : captionTextView.text , "Likes" : 0 , "ImageUrl" : downloadURL]
+        let postUrl = DataService.Ds.BASE_POSTS.childByAutoId()
+        postUrl.setValue(post)
+        captionTextView.text = ""
+        imageView.image = UIImage(named: "add_feeling_btn")
+        //tableView.reloadData()
     }
    
 }
